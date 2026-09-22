@@ -18,8 +18,14 @@ cd ~/ur_ws
 source /opt/ros/jazzy/setup.bash
 source install/setup.bash
 ros2 launch ur_simulation_gz ur_sim_moveit.launch.py ur_type:=ur3
+```
 
+### Terminal 2
+
+```bash
 cd ~/ur_ws
 source /opt/ros/jazzy/setup.bash
 source install/setup.bash
 ros2 run ur3_circle drawing_node.py --ros-args -p use_sim_time:=true
+```
+
