@@ -18,7 +18,8 @@ cd ~/ur_ws
 colcon build --packages-select ur3_circle
 source /opt/ros/jazzy/setup.bash
 source install/setup.bash
-ros2 launch ur_simulation_gz ur_sim_moveit.launch.py ur_type:=ur3
+ros2 launch ur3_circle ur3_circle.launch.py
+
 ```
 
 ### Terminal 2
