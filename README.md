@@ -15,6 +15,7 @@ Mô phỏng robot UR3 vẽ quỹ đạo hình tròn bằng ROS 2 Jazzy, Gazebo S
 
 ```bash
 cd ~/ur_ws
+colcon build --packages-select ur3_circle
 source /opt/ros/jazzy/setup.bash
 source install/setup.bash
 ros2 launch ur_simulation_gz ur_sim_moveit.launch.py ur_type:=ur3
@@ -24,6 +25,7 @@ ros2 launch ur_simulation_gz ur_sim_moveit.launch.py ur_type:=ur3
 
 ```bash
 cd ~/ur_ws
+colcon build --packages-select ur3_circle
 source /opt/ros/jazzy/setup.bash
 source install/setup.bash
 ros2 run ur3_circle drawing_node.py --ros-args -p use_sim_time:=true
