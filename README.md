@@ -14,11 +14,12 @@ Mô phỏng robot UR3 vẽ quỹ đạo hình tròn bằng ROS 2 Jazzy, Gazebo S
 ### Terminal 1
 
 ```bash
-cd ~/ur_ws
-colcon build --packages-select ur3_circle
+ccd ~/ur_ws
+
 source /opt/ros/jazzy/setup.bash
 source install/setup.bash
-ros2 launch ur3_circle ur3_circle.launch.py
+
+ros2 launch ur3_llm_control llm_robot.launch.py
 
 ```
 
@@ -26,9 +27,8 @@ ros2 launch ur3_circle ur3_circle.launch.py
 
 ```bash
 cd ~/ur_ws
-colcon build --packages-select ur3_circle
+
 source /opt/ros/jazzy/setup.bash
 source install/setup.bash
-ros2 run ur3_circle drawing_node.py --ros-args -p use_sim_time:=true
-```
 
+ros2 run ur3_llm_control skill_executor
