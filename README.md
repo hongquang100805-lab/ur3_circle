@@ -1,6 +1,5 @@
-# UR3 Circle Drawing with MoveIt 2
+# UR3 Điều khiển ngữ nghĩa với Ur3
 
-Mô phỏng robot UR3 vẽ quỹ đạo hình tròn bằng ROS 2 Jazzy, Gazebo Sim và MoveIt 2.
 
 ## Requirements
 
