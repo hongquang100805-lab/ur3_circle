@@ -1,0 +1,25 @@
+robot_base_height: 0.0
+
+table:
+  center: [0.38, 0.0, 0.185]
+  size: [0.30, 0.65, 0.03]
+
+objects:
+  red_cube:
+    position: [0.38, -0.15, 0.22]
+
+  yellow_cube:
+    position: [0.38, 0.0, 0.22]
+
+  blue_cube:
+    position: [0.38, 0.15, 0.22]
+
+zones:
+  zone_a:
+    position: [0.28, -0.15, 0.201]
+
+  zone_b:
+    position: [0.28, 0.0, 0.201]
+
+  zone_c:
+    position: [0.28, 0.15, 0.201]

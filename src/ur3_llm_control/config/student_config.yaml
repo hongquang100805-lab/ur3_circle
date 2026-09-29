@@ -1,0 +1,7 @@
+student_name: "Le Hong Quang"
+student_id: "23020757"
+
+zone_mapping:
+  zone_a: yellow_cube
+  zone_b: blue_cube
+  zone_c: red_cube

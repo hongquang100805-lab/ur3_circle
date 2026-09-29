@@ -44,6 +44,8 @@ def launch_setup(context, *args, **kwargs):
     description_file = LaunchConfiguration("description_file")
     moveit_launch_file = LaunchConfiguration("moveit_launch_file")
     launch_servo = LaunchConfiguration("launch_servo")
+    launch_rviz = LaunchConfiguration("launch_rviz")
+    gazebo_gui = LaunchConfiguration("gazebo_gui")
 
     ur_control_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -56,7 +58,8 @@ def launch_setup(context, *args, **kwargs):
             "safety_limits": safety_limits,
             "controllers_file": controllers_file,
             "description_file": description_file,
-            "launch_rviz": "false",
+            "launch_rviz": launch_rviz,
+            "gazebo_gui": gazebo_gui,
         }.items(),
     )
 
@@ -65,7 +68,7 @@ def launch_setup(context, *args, **kwargs):
         launch_arguments={
             "ur_type": ur_type,
             "use_sim_time": "true",
-            "launch_rviz": "true",
+            "launch_rviz": launch_rviz,
             "launch_servo": launch_servo,
         }.items(),
     )
@@ -126,6 +129,20 @@ def generate_launch_description():
             "launch_servo",
             default_value="false",
             description="Launch the MoveIt servo.",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "launch_rviz",
+            default_value="true",
+            description="Launch RViz.",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "gazebo_gui",
+            default_value="true",
+            description="Launch the Gazebo graphical client.",
         )
     )
     declared_arguments.append(
